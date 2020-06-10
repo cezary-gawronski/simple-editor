@@ -14,30 +14,35 @@
   <body>
     <main>
       <section class="container">
-        <div class="textarea-container">
+        <h1>Simple Editor</h1>
+        <div class="editor-container">
           <svg class="screen-color-filter">
             <rect width="0" height="0"></rect>
           </svg>
           <label class="textarea-label" for="editor">
-            <textarea class="form__textarea" id="editor" name="suggestions">
+            <textarea
+              class="form__textarea form__textarea--js"
+              id="editor"
+              name="suggestions"
+            >
 POBAW SIĘ ZE MNĄ...
-# CZERWONY PRZYCISK CZYŚCI EKRAN
-# ZIELONY ZAPISUJE ZMIANY
-# MOŻESZ ZMIENIĆ RÓWNIEŻ KOLOR EKRANU ORAZ FONTU :)
+# „Enter” zapisuje DANE;
+# „ESC” ładuje DANE;
+# MYSZA czyść ekran;
 </textarea
             >
           </label>
           <p class="inputs-color-container">
-            <label class="screen-label" for="screen-color"> </label>
+            <label class="screen-label" for="screen-color-input"> </label>
             <input
               value="#1c1d1f"
-              class="screen-color-input"
+              class="screen-color-input screen-color-input--js"
               type="color"
               name="screen-color"
               id="screen-color-input"
             />
 
-            <label class="font-label" for="font-color"> </label>
+            <label class="font-label" for="font-color-input"> </label>
 
             <input
               value="#04b33e"
@@ -47,8 +52,9 @@ POBAW SIĘ ZE MNĄ...
               id="font-color-input"
             />
           </p>
-          <button class="save-button"></button>
-          <button class="clear-button"></button>
+          <button class="button-style save-button save-button--js"></button>
+          <button class="button-style load-button load-button--js"></button>
+          <button class="button-style clear-button clear-button--js"></button>
         </div>
       </section>
     </main>

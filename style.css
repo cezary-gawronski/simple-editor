@@ -71,7 +71,7 @@ body {
   margin-left: 11px;
 }
 
-.textarea-container {
+.editor-container {
   position: relative;
   width: 450px;
   height: 330px;
@@ -88,7 +88,7 @@ body {
   mix-blend-mode: multiply;
 }
 
-.textarea-container::before {
+.editor-container::before {
   content: url(/img/comp-apple-2.png);
   top: -110px;
   left: -201px;
@@ -98,6 +98,10 @@ body {
   z-index: -1;
 }
 
+.button-style:focus {
+  outline: transparent;
+}
+
 .save-button {
   position: absolute;
   width: 40px;
@@ -105,31 +109,45 @@ body {
   top: 600px;
   left: 485px;
   padding: 15px 0px;
-  background-color: rgba(0, 128, 0, 0.774);
+  background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.clear-button {
+.load-button {
   position: absolute;
   top: 570px;
   width: 30px;
   height: 30px;
   left: -90px;
   padding: 8px 0px;
-  background-color: rgba(231, 6, 251, 0.842);
-  /* background-color: transparent; */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.clear-button {
+  position: absolute;
+  top: 670px;
+  left: 750px;
+  width: 30px;
+  height: 30px;
+  padding: 8px 0px;
+  background-color: red;
   border: none;
   cursor: pointer;
 }
 
 .form__textarea {
   position: absolute;
-  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  resize: none;
+
   outline: transparent;
+  background-color: transparent;
   border: transparent;
   margin: 0px;
-  min-width: 100%;
-  min-height: 100%;
+
   font-size: 12px;
   font-weight: normal;
   line-height: 1.8;
@@ -138,6 +156,15 @@ body {
   color: var(--font-color);
   text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 3px rgb(0, 0, 0),
     0 0 5px var(--font-color), 0 0 5px var(--font-color);
-  resize: none;
+
   z-index: 1;
+}
+
+.red-alert {
+  padding-top: 70px;
+  line-height: 2;
+  text-align: center;
+  font-size: 18px;
+  color: red;
+  text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 1px rgb(0, 0, 0), 0 0 1px rgb(3, 3, 3);
 }
