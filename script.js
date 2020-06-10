@@ -18,6 +18,7 @@ const entryInput = document.querySelector('.editor-textarea--js');
 const saveButton = document.querySelector('.save-button--js');
 const loadButton = document.querySelector('.load-button--js');
 const clearButton = document.querySelector('.clear-button--js');
+const clearButtonSpacebar = document.querySelector('.clear-button-spacebar--js');
 entryInput.classList.add('do-not-save--js');
 
 saveButton.addEventListener('click', () => {
@@ -35,7 +36,7 @@ loadButton.addEventListener('click', () => {
     if (result) {
         entryInput.value = result;
         entryInput.classList.remove('red-alert--js');
-        entryInput.value = `Załadowano dane które zapisałeś podczas ostatniej wizyty: „${result}”`;
+        entryInput.value = `Załadowano dane które zostały zapisane podczas ostatniej wizyty: „${result}”`;
     } else {
         entryInput.value = "Brak danych do załadowania. Wpisz nowe dane i naciśnij ENTER!";
         entryInput.classList.add('red-alert--js');
@@ -44,6 +45,11 @@ loadButton.addEventListener('click', () => {
 });
 
 clearButton.addEventListener('click', () => {
+    entryInput.value = 'Wyczyściłeś ekran. ZAŁADUJ ponownie dane lub DODAJ nowe.';
+    entryInput.classList.add('red-alert--js');
+});
+
+clearButtonSpacebar.addEventListener('click', () => {
     entryInput.value = 'Wyczyściłeś ekran. ZAŁADUJ ponownie dane lub DODAJ nowe.';
     entryInput.classList.add('red-alert--js');
 });

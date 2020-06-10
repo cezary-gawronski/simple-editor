@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  height: 120vh;
   background: rgb(42, 17, 7);
   background: radial-gradient(
       circle,
@@ -37,29 +37,23 @@ body {
 }
 
 .container {
-  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding-top: 15vh;
-  transform-origin: center center;
   transition: 0.2s linear transform;
 }
 
 .main-header {
-  position: absolute;
-  transform: rotate(45deg);
-  top: 380px;
-  right: 200px;
+  margin-top: 40px;
   text-align: center;
   font-family: "Bree Serif";
-  font-size: 90px;
+  font-size: 60px;
   color: var(--font-color);
 }
 
 @media (max-width: 769px) {
   .container {
-    transform: scale(0.8);
+    transform: scale(0.5);
   }
 }
 
@@ -72,26 +66,37 @@ body {
 .inputs-color-container {
   position: absolute;
   font-size: 30px;
-  top: 370px;
+  top: 375px;
   left: 0px;
 }
 
 .screen-label::before {
   content: url("img/desktop-solid.svg");
+  filter: drop-shadow(0 0 3px var(--screen-color));
 }
 .font-label::before {
   content: url("img/font-solid.svg");
+  filter: drop-shadow(0 0 3px var(--font-color));
 }
 .screen-label::before,
 .font-label::before {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+}
+.screen-label::after {
+  content: "Zmień kolor:";
   position: absolute;
-  width: 20px;
-  top: -20px;
-  margin-left: 11px;
+  top: -25px;
+  left: 0px;
+  font-size: 18px;
+  text-align: center;
+  font-family: var(--font-style);
 }
 
 .editor-container {
   position: relative;
+  margin-top: 140px;
   width: 450px;
   height: 306px;
 }
@@ -152,7 +157,18 @@ body {
   transform: rotate(10deg) skew(-48deg);
   height: 30px;
   padding: 8px 0px;
-  background-color: rgb(51, 202, 14);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.clear-button-spacebar {
+  position: absolute;
+  top: 668px;
+  left: 39px;
+  width: 327px;
+  transform: rotate(1deg) skew(0);
+  height: 38px;
+  padding: 8px 0px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -166,7 +182,6 @@ body {
 
   outline: transparent;
   background-color: transparent;
-  /* background-color: gray; */
   border: transparent;
   margin: 10px 0px;
   padding: 35px;
