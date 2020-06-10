@@ -30,12 +30,24 @@ body {
 }
 
 .container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 15vh;
   transform-origin: center center;
   transition: 0.2s linear transform;
+}
+
+.main-header {
+  position: absolute;
+  transform: rotate(45deg);
+  top: 380px;
+  right: 200px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 90px;
+  color: var(--font-color);
 }
 
 @media (max-width: 769px) {
@@ -127,12 +139,14 @@ body {
 
 .clear-button {
   position: absolute;
-  top: 670px;
-  left: 750px;
-  width: 30px;
+  top: 677px;
+  left: 731px;
+  width: 80px;
+  transform: rotate(10deg) skew(-48deg);
   height: 30px;
   padding: 8px 0px;
-  background-color: red;
+  background-color: rgb(51, 202, 14);
+  background-color: transparent;
   border: none;
   cursor: pointer;
 }
@@ -160,11 +174,15 @@ body {
   z-index: 1;
 }
 
-.red-alert {
+.red-alert--js {
   padding-top: 70px;
   line-height: 2;
   text-align: center;
   font-size: 18px;
   color: red;
   text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 1px rgb(0, 0, 0), 0 0 1px rgb(3, 3, 3);
+}
+
+.do-not-save--js {
+  /* class added in js */
 }
