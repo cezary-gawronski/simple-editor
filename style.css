@@ -1,3 +1,11 @@
+/* font-family: 'Press Start 2P', cursive; */
+
+:root {
+  --screen-color: #1c1d1f;
+  --font-color: #00f014;
+  --font-style: "Press Start 2P", sans-serif;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -9,16 +17,25 @@ html {
   margin: 0;
 }
 
+body {
+  min-height: 100vh;
+  background: rgb(42, 17, 7);
+  background: radial-gradient(
+      circle,
+      rgba(42, 17, 7, 0.842) 0%,
+      rgba(228, 216, 199, 1) 100%
+    ),
+    radial-gradient(circle, var(--font-color) 35%, rgba(255, 255, 255, 0) 65%);
+  background-repeat: no-repeat;
+}
+
 .container {
   display: flex;
   justify-content: center;
-  align-items: top;
+  align-items: center;
   padding-top: 15vh;
-  min-height: 100vh;
   transform-origin: center center;
   transition: 0.2s linear transform;
-  background-color: antiquewhite;
-  z-index: -1;
 }
 
 @media (max-width: 769px) {
@@ -33,14 +50,42 @@ html {
   }
 }
 
-.comp-container {
-  /* background-color: red; */
+.inputs-color-container {
+  position: absolute;
+  font-size: 30px;
+  top: 370px;
+  left: 0px;
+}
+
+.screen-label::before {
+  content: url("img/desktop-solid.svg");
+}
+.font-label::before {
+  content: url("img/font-solid.svg");
+}
+.screen-label::before,
+.font-label::before {
+  position: absolute;
+  width: 20px;
+  top: -20px;
+  margin-left: 11px;
 }
 
 .textarea-container {
   position: relative;
   width: 450px;
   height: 330px;
+}
+
+.screen-color-filter {
+  position: absolute;
+  width: 450px;
+  height: 330px;
+  transform: scale(0.9);
+  filter: blur(8px);
+  border-radius: 20px;
+  background-color: var(--screen-color);
+  mix-blend-mode: multiply;
 }
 
 .textarea-container::before {
@@ -50,8 +95,7 @@ html {
   transform-origin: left top;
   transform: scale(0.9);
   position: absolute;
-  z-index: 0;
-  /* opacity: 0.7; */
+  z-index: -1;
 }
 
 .save-button {
@@ -63,7 +107,6 @@ html {
   padding: 15px 0px;
   background-color: rgba(0, 128, 0, 0.774);
   border: none;
-  z-index: 2;
   cursor: pointer;
 }
 .clear-button {
@@ -76,41 +119,25 @@ html {
   background-color: rgba(231, 6, 251, 0.842);
   /* background-color: transparent; */
   border: none;
-  z-index: 2;
   cursor: pointer;
 }
 
-/* .color-button {
-  position: absolute;
-  top: 570px;
-  opacity: 1;
-} */
-
-/* .textarea-container::after {
-  content: url(/img/comp-apple-2-innershadow.png);
-  top: -110px;
-  left: -201px;
-  transform-origin: left top;
-  transform: scale(0.9);
-  position: absolute;
-  opacity: 0.5;
-  z-index: 0;
-} */
-
 .form__textarea {
+  position: absolute;
   background-color: transparent;
   outline: transparent;
   border: transparent;
   margin: 0px;
   min-width: 100%;
   min-height: 100%;
-  font-size: 18px;
-  padding: 25px;
-  color: darkgreen;
-  font-weight: bolder;
-  mix-blend-mode: multiply;
-  /* width: 480px;
-  height: 320px; */
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.8;
+  font-family: var(--font-style);
+  padding: 35px;
+  color: var(--font-color);
+  text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 3px rgb(0, 0, 0),
+    0 0 5px var(--font-color), 0 0 5px var(--font-color);
   resize: none;
   z-index: 1;
 }

@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Prosty edytor</title>
@@ -10,18 +14,41 @@
   <body>
     <main>
       <section class="container">
-        <div class="comp-container">
-          <div class="textarea-container">
-            <label class="textarea-label" for="editor">
-              <textarea
-                class="form__textarea"
-                id="editor"
-                name="suggestions"
-              ></textarea>
-            </label>
-            <button class="save-button"></button>
-            <button class="clear-button"></button>
-          </div>
+        <div class="textarea-container">
+          <svg class="screen-color-filter">
+            <rect width="0" height="0"></rect>
+          </svg>
+          <label class="textarea-label" for="editor">
+            <textarea class="form__textarea" id="editor" name="suggestions">
+POBAW SIĘ ZE MNĄ...
+# CZERWONY PRZYCISK CZYŚCI EKRAN
+# ZIELONY ZAPISUJE ZMIANY
+# MOŻESZ ZMIENIĆ RÓWNIEŻ KOLOR EKRANU ORAZ FONTU :)
+</textarea
+            >
+          </label>
+          <p class="inputs-color-container">
+            <label class="screen-label" for="screen-color"> </label>
+            <input
+              value="#1c1d1f"
+              class="screen-color-input"
+              type="color"
+              name="screen-color"
+              id="screen-color-input"
+            />
+
+            <label class="font-label" for="font-color"> </label>
+
+            <input
+              value="#04b33e"
+              class="font-color-input"
+              type="color"
+              name="font-color"
+              id="font-color-input"
+            />
+          </p>
+          <button class="save-button"></button>
+          <button class="clear-button"></button>
         </div>
       </section>
     </main>
