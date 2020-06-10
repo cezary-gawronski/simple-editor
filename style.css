@@ -1,9 +1,16 @@
 /* font-family: 'Press Start 2P', cursive; */
+/* font-family: 'Bree Serif', serif; */
+/* font-family: 'Coda', cursive; */
 
 :root {
   --screen-color: #1c1d1f;
   --font-color: #00f014;
-  --font-style: "Press Start 2P", sans-serif;
+  --font-style: "Bree Serif", sans-serif;
+  --font-size: 22px;
+  --line-height-editor: 1.8;
+  --font-size-alert: 36px;
+  --line-height-alert: 1.4;
+  /* --font-style: "Press Start 2P", sans-serif; */
 }
 
 html {
@@ -45,7 +52,7 @@ body {
   top: 380px;
   right: 200px;
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Bree Serif";
   font-size: 90px;
   color: var(--font-color);
 }
@@ -86,7 +93,7 @@ body {
 .editor-container {
   position: relative;
   width: 450px;
-  height: 330px;
+  height: 306px;
 }
 
 .screen-color-filter {
@@ -151,7 +158,7 @@ body {
   cursor: pointer;
 }
 
-.form__textarea {
+.editor-textarea {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -159,14 +166,15 @@ body {
 
   outline: transparent;
   background-color: transparent;
+  /* background-color: gray; */
   border: transparent;
-  margin: 0px;
-
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 1.8;
-  font-family: var(--font-style);
+  margin: 10px 0px;
   padding: 35px;
+
+  font-size: var(--font-size);
+  font-weight: normal;
+  line-height: var(--line-height-editor);
+  font-family: var(--font-style);
   color: var(--font-color);
   text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 2px rgb(0, 0, 0), 0 0 3px rgb(0, 0, 0),
     0 0 5px var(--font-color), 0 0 5px var(--font-color);
@@ -175,10 +183,10 @@ body {
 }
 
 .red-alert--js {
-  padding-top: 70px;
-  line-height: 2;
+  padding-top: 45px;
+  line-height: var(--line-height-alert);
   text-align: center;
-  font-size: 18px;
+  font-size: var(--font-size-alert);
   color: red;
   text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 1px rgb(0, 0, 0), 0 0 1px rgb(3, 3, 3);
 }

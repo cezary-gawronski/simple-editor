@@ -14,7 +14,7 @@ fontColorInput.addEventListener("input", () => {
 
 
 const saveText = document.querySelector(".screen-color-input--js");
-const entryInput = document.querySelector('.form__textarea--js');
+const entryInput = document.querySelector('.editor-textarea--js');
 const saveButton = document.querySelector('.save-button--js');
 const loadButton = document.querySelector('.load-button--js');
 const clearButton = document.querySelector('.clear-button--js');
