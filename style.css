@@ -1,0 +1,116 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  padding-top: 15vh;
+  min-height: 100vh;
+  transform-origin: center center;
+  transition: 0.2s linear transform;
+  background-color: antiquewhite;
+  z-index: -1;
+}
+
+@media (max-width: 769px) {
+  .container {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    transform: scale(0.5);
+  }
+}
+
+.comp-container {
+  /* background-color: red; */
+}
+
+.textarea-container {
+  position: relative;
+  width: 450px;
+  height: 330px;
+}
+
+.textarea-container::before {
+  content: url(/img/comp-apple-2.png);
+  top: -110px;
+  left: -201px;
+  transform-origin: left top;
+  transform: scale(0.9);
+  position: absolute;
+  z-index: 0;
+  /* opacity: 0.7; */
+}
+
+.save-button {
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  top: 600px;
+  left: 485px;
+  padding: 15px 0px;
+  background-color: rgba(0, 128, 0, 0.774);
+  border: none;
+  z-index: 2;
+  cursor: pointer;
+}
+.clear-button {
+  position: absolute;
+  top: 570px;
+  width: 30px;
+  height: 30px;
+  left: -90px;
+  padding: 8px 0px;
+  background-color: rgba(231, 6, 251, 0.842);
+  /* background-color: transparent; */
+  border: none;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* .color-button {
+  position: absolute;
+  top: 570px;
+  opacity: 1;
+} */
+
+/* .textarea-container::after {
+  content: url(/img/comp-apple-2-innershadow.png);
+  top: -110px;
+  left: -201px;
+  transform-origin: left top;
+  transform: scale(0.9);
+  position: absolute;
+  opacity: 0.5;
+  z-index: 0;
+} */
+
+.form__textarea {
+  background-color: transparent;
+  outline: transparent;
+  border: transparent;
+  margin: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 18px;
+  padding: 25px;
+  color: darkgreen;
+  font-weight: bolder;
+  mix-blend-mode: multiply;
+  /* width: 480px;
+  height: 320px; */
+  resize: none;
+  z-index: 1;
+}
