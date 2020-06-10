@@ -19,6 +19,8 @@ const saveButton = document.querySelector('.save-button--js');
 const loadButton = document.querySelector('.load-button--js');
 const clearButton = document.querySelector('.clear-button--js');
 const clearButtonSpacebar = document.querySelector('.clear-button-spacebar--js');
+const resetButton = document.querySelector('.reset-button--js');
+
 entryInput.classList.add('do-not-save--js');
 
 saveButton.addEventListener('click', () => {
@@ -52,6 +54,15 @@ clearButton.addEventListener('click', () => {
 clearButtonSpacebar.addEventListener('click', () => {
     entryInput.value = 'Wyczyściłeś ekran. ZAŁADUJ ponownie dane lub DODAJ nowe.';
     entryInput.classList.add('red-alert--js');
+});
+
+let instruction = entryInput.value;
+console.log(instruction);
+resetButton.addEventListener('click', () => {
+    localStorage.setItem('entry', '');
+    entryInput.value = `Wyczyściłeś Local Storage przeglądarki. Zaczynamy od początku 🤣 ${instruction}`;
+    entryInput.classList.remove('red-alert--js');
+
 });
 
 entryInput.addEventListener('click', () => {

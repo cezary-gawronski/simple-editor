@@ -174,6 +174,19 @@ body {
   cursor: pointer;
 }
 
+.reset-button {
+  position: absolute;
+  top: 599px;
+  left: 94px;
+  width: 38px;
+  transform: rotate(1deg) skew(0);
+  height: 32px;
+  padding: 8px 0px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .editor-textarea {
   position: absolute;
   width: 100%;
