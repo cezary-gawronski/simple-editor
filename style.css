@@ -108,7 +108,7 @@ body {
 }
 
 .editor-container::before {
-  content: url(/img/comp-apple-2.png);
+  content: url(img/comp-apple-2.png);
   top: -110px;
   left: -201px;
   transform-origin: left top;
