@@ -62,6 +62,8 @@ resetButton.addEventListener('click', () => {
     localStorage.setItem('entry', '');
     entryInput.value = `Wyczyściłeś Local Storage przeglądarki. Zaczynamy od początku 🤣 ${instruction}`;
     entryInput.classList.remove('red-alert--js');
+    document.documentElement.style.setProperty('--screen-color', '');
+    document.documentElement.style.setProperty('--font-color', '');
 
 });
 
